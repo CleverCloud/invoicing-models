@@ -1,0 +1,361 @@
+{
+   "name": "CleverCloudInvoicingModel",
+      "type": "record",
+      "namespace": "com.clevercloud.invoicing",
+      "fields": [
+      {
+         "name": "policies",
+         "type": {
+            "type": "array",
+            "items": {
+               "name": "policies_record",
+               "type": "record",
+               "fields": [
+               {
+                  "name": "owner_id",
+                  "type": "string"
+               },
+               {
+                  "name": "zone",
+                  "type": [
+                     "string",
+                  "null"
+                  ]
+               },
+               {
+                  "name": "runtime_prices",
+                  "type": {
+                     "type": "array",
+                     "items": {
+                        "name": "runtime_prices_record",
+                        "type": "record",
+                        "fields": [
+                        {
+                           "name": "flavor",
+                           "type": "string"
+                        },
+                        {
+                           "name": "time_unit",
+                           "type": "int"
+                        },
+                        {
+                           "name": "prices",
+                           "type": {
+                              "type": "array",
+                              "items": {
+                                 "name": "prices_record",
+                                 "type": "record",
+                                 "fields": [
+                                 {
+                                    "name": "currency",
+                                    "type": "string"
+                                 },
+                                 {
+                                    "name": "price",
+                                    "type": "float"
+                                 }
+                                 ]
+                              }
+                           }
+                        }
+                        ]
+                     }
+                  }
+               },
+               {
+                  "name": "runtime_options",
+                  "type": {
+                     "type": "array",
+                     "items": {
+                        "name": "runtime_options_record",
+                        "type": "record",
+                        "fields": [
+                        {
+                           "name": "option_name",
+                           "type": "string"
+                        },
+                        {
+                           "name": "mod_type",
+                           "type": {
+                              "type": "enum",
+                              "name": "mod_type",
+                              "symbols": ["ADD","FACTOR"]
+                           }
+                        },
+                        {
+                           "name": "value",
+                           "type": "float"
+                        }
+                        ]
+                     }
+                  }
+               },
+               {
+                  "name": "byte_prices",
+                  "type": {
+                     "type": "array",
+                     "items": {
+                        "name": "byte_prices_record",
+                        "type": "record",
+                        "fields": [
+                        {
+                           "name": "service",
+                           "type": "string"
+                        },
+                        {
+                           "name": "price_plans",
+                           "type": {
+                              "type": "array",
+                              "items": {
+                                 "name": "price_plans_record",
+                                 "type": "record",
+                                 "fields": [
+                                 {
+                                    "name": "data_unit",
+                                    "type": "string"
+                                 },
+                                 {
+                                    "name": "time_unit",
+                                    "type": "string"
+                                 },
+                                 {
+                                    "name": "max_quantity",
+                                    "type": ["int","null"]
+                                 },
+                                 {
+                                    "name": "prices",
+                                    "type": {
+                                       "type": "array",
+                                       "items": {
+                                          "name": "byte_price_record",
+                                          "type": "record",
+                                          "fields": [
+                                          {
+                                             "name": "currency",
+                                             "type": "string"
+                                          },
+                                          {
+                                             "name": "price",
+                                             "type": "float"
+                                          }
+                                          ]
+                                       }
+                                    }
+                                 }
+                                 ]
+                              }
+                           }
+                        }
+                        ]
+                     }
+                  }
+               }
+               ]
+            }
+         }
+      },
+      {
+         "name": "consumptions",
+         "type": {
+            "type": "array",
+            "items": [
+            {
+               "name": "byte_consumption",
+               "type": "record",
+               "fields": [
+               {
+                  "name": "owner_id",
+                  "type": "string"
+               },
+               {
+                  "name": "zone",
+                  "type": "string"
+               },
+               {
+                  "name": "service_type",
+                  "type": "string"
+               },
+               {
+                  "name": "service_id",
+                  "type": "string"
+               },
+               {
+                  "name": "consumption_type",
+                  "type": "string",
+                  "default": "byte"
+               },
+               {
+                  "name": "daily_consumptions",
+                  "type": {
+                     "type": "array",
+                     "items": {
+                        "name": "daily_consumptions_record",
+                        "type": "record",
+                        "fields": [
+                        {
+                           "name": "date",
+                           "type": "string"
+                        },
+                        {
+                           "name": "size_megabytes",
+                           "type": "int"
+                        }
+                        ]
+                     }
+                  }
+               }
+               ]
+            },
+            {
+               "name": "runtime_consumption",
+               "type": "record",
+               "fields": [
+               {
+                  "name": "owner_id",
+                  "type": "string"
+               },
+               {
+                  "name": "zone",
+                  "type": "string"
+               },
+               {
+                  "name": "service_id",
+                  "type": "string"
+               },
+               {
+                  "name": "consumption_type",
+                  "type": "string",
+                  "default": "runtime"
+               },
+               {
+                  "name": "runtime_consumptions",
+                  "type": {
+                     "type": "array",
+                     "items": {
+                        "name": "runtime_consumptions_record",
+                        "type": "record",
+                        "fields": [
+                        {
+                           "name": "flavor_id",
+                           "type": "string"
+                        },
+                        {
+                           "name": "instance_id",
+                           "type": "string"
+                        },
+                        {
+                           "name": "start_at",
+                           "type": "string"
+                        },
+                        {
+                           "name": "end_at",
+                           "type": "string"
+                        },
+                        {
+                           "name": "options",
+                           "type": {
+                              "type": "array",
+                              "items": {
+                                 "name": "runtime_option_applied",
+                                 "type": "record",
+                                 "fields": [
+                                 {
+                                    "name": "option_name",
+                                    "type": "string"
+                                 },
+                                 {
+                                    "name": "quantity",
+                                    "type": "long"
+                                 }
+                                 ]
+                              }
+                           }
+                        }
+                        ]
+                     }
+                  }
+               }
+               ]
+            }
+            ]
+         }
+      },
+      {
+         "name": "extra_items",
+         "type": {
+            "type": "array",
+            "items": {
+               "name": "extra_items_record",
+               "type": "record",
+               "fields": [
+               {
+                  "name": "owner_id",
+                  "type": "string"
+               },
+               {
+                  "name": "description",
+                  "type": "string"
+               },
+               {
+                  "name": "sub_description",
+                  "type": "string"
+               },
+               {
+                  "name": "currency",
+                  "type": "string"
+               },
+               {
+                  "name": "price",
+                  "type": "float"
+               }
+               ]
+            }
+         }
+      },
+      {
+         "name": "invoice",
+         "type": {
+            "name": "invoice",
+            "type": "record",
+            "fields": [
+            {
+               "name": "owner_id",
+               "type": "string"
+            },
+            {
+               "name": "items",
+               "type": {
+                  "type": "array",
+                  "items": {
+                     "name": "items_record",
+                     "type": "record",
+                     "fields": [
+                     {
+                        "name": "currency",
+                        "type": "string"
+                     },
+                     {
+                        "name": "unit_price",
+                        "type": "float"
+                     },
+                     {
+                        "name": "quantity",
+                        "type": "int"
+                     },
+                     {
+                        "name": "description",
+                        "type": "string"
+                     },
+                     {
+                        "name": "sub_description",
+                        "type": "string"
+                     }
+                     ]
+                  }
+               }
+            }
+            ]
+         }
+      }
+   ]
+}
