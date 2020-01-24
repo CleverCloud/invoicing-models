@@ -155,13 +155,13 @@
             "service_type": "cellar",
             "service_id": "cellar_xxx",
             "consumption_type": "byte",
-            "daily_consumptions": [
-               { "date": "2020-01-12", "size_megabytes": 12 },
-               { "date": "2020-01-13", "size_megabytes": 8 },
-               { "date": "2020-01-14", "size_megabytes": 500 },
-               { "date": "2020-01-15", "size_megabytes": 8388700 },
-               { "date": "2020-01-16", "size_megabytes": 8388700 },
-               { "date": "2020-01-17", "size_megabytes": 19922944 }
+            "byte_consumptions": [
+               { "start_at": "2020-01-12T00:00:00.000Z", "end_at": "2020-01-12T23:59:59.999Z", "data_unit": "MB", "size": 12 },
+               { "start_at": "2020-01-13T00:00:00.000Z", "end_at": "2020-01-13T23:59:59.999Z", "data_unit": "MB", "size": 8 },
+               { "start_at": "2020-01-14T00:00:00.000Z", "end_at": "2020-01-14T23:59:59.999Z", "data_unit": "MB", "size": 500 },
+               { "start_at": "2020-01-15T00:00:00.000Z", "end_at": "2020-01-15T23:59:59.999Z", "data_unit": "MB", "size": 8388700 },
+               { "start_at": "2020-01-16T00:00:00.000Z", "end_at": "2020-01-16T23:59:59.999Z", "data_unit": "MB", "size": 8388700 },
+               { "start_at": "2020-01-17T00:00:00.000Z", "end_at": "2020-01-17T23:59:59.999Z", "data_unit": "MB", "size": 19922944 }
             ]
          }
       },

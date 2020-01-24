@@ -180,12 +180,7 @@
                   "type": "string"
                },
                {
-                  "name": "consumption_type",
-                  "type": "string",
-                  "default": "byte"
-               },
-               {
-                  "name": "daily_consumptions",
+                  "name": "byte_consumptions",
                   "type": {
                      "type": "array",
                      "items": {
@@ -193,11 +188,19 @@
                         "type": "record",
                         "fields": [
                         {
-                           "name": "date",
+                           "name": "start_at",
                            "type": "string"
                         },
                         {
-                           "name": "size_megabytes",
+                           "name": "end_at",
+                           "type": "string"
+                        },
+                        {
+                           "name": "data_unit",
+                           "type": "string"
+                        },
+                        {
+                           "name": "size",
                            "type": "int"
                         }
                         ]
@@ -221,11 +224,6 @@
                {
                   "name": "service_id",
                   "type": "string"
-               },
-               {
-                  "name": "consumption_type",
-                  "type": "string",
-                  "default": "runtime"
                },
                {
                   "name": "runtime_consumptions",
