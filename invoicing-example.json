@@ -166,23 +166,6 @@
          }
       },
       {
-         "com.clevercloud.invoicing.byte_consumption": {
-            "owner_id": "orga_foobar",
-            "zone": "gravelines",
-            "consumption_type": "byte",
-            "service_type": "cellar",
-            "service_id": "cellar_yyy",
-            "daily_consumptions": [
-               { "date": "2020-01-12", "size_megabytes": 12 },
-               { "date": "2020-01-13", "size_megabytes": 8 },
-               { "date": "2020-01-14", "size_megabytes": 20 },
-               { "date": "2020-01-15", "size_megabytes": 25 },
-               { "date": "2020-01-16", "size_megabytes": 31 },
-               { "date": "2020-01-17", "size_megabytes": 50 }
-            ]
-         }
-      },
-      {
          "com.clevercloud.invoicing.runtime_consumption": {
             "owner_id": "orga_foobar",
             "zone": "gravelines",
@@ -221,26 +204,12 @@
             "consumption_type": "runtime",
             "runtime_consumptions": [
                {
-                  "flavor_id": "S",
+                  "flavor_id": "M",
                   "instance_id": "f33ce73f-d2e3-412b-ad33-ecaac810a7c3",
-                  "start_at": "2020-01-12T10:29:04.000Z",
-                  "end_at": "2020-01-20T14:03:12.000Z",
-                  "options": [ { "option_name": "extra_disk_1g", "quantity": 50 } ]
-               },
-               {
-                  "flavor_id": "XS",
-                  "instance_id": "cffa9d42-3218-413c-b42c-8f4b23d67215",
-                  "start_at": "2020-01-20T13:58:01.000Z",
+                  "start_at": "2020-01-10T10:29:04.000Z",
                   "end_at": "2020-01-31T23:59:59.999Z",
                   "options": [ { "option_name": "extra_disk_1g", "quantity": 50 } ]
                },
-               {
-                  "flavor_id": "XS",
-                  "instance_id": "21a17455-43b4-403b-8f57-d2599e945ab4",
-                  "start_at": "2020-01-20T13:58:01.000Z",
-                  "end_at": "2020-01-31T23:59:59.999Z",
-                  "options": [ { "option_name": "extra_disk_1g", "quantity": 50 } ]
-               }
             ]
          }
       }
@@ -253,10 +222,17 @@
       "items": [
          {
             "currency": "EUR",
-            "unit_price": 120.50,
+            "unit_price": 60.50,
             "quantity": 1,
             "description": "Consumption price for app_xxx",
-            "sub_description": "Java application with a total of 3 instances booted between 2020-01-12 and 2020-01-31"
+            "sub_description": "Java application with a total of 3 instances running between 2020-01-12 and 2020-01-31"
+         },
+         {
+            "currency": "EUR",
+            "unit_price": 30.50,
+            "quantity": 1,
+            "description": "Consumption price for app_yyy",
+            "sub_description": "Java application with a total of 1 instances running between 2020-01-10 and 2020-01-31"
          },
          {
             "currency": "EUR",
