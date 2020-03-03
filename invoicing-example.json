@@ -64,10 +64,10 @@
       "byte_prices": [
         {
           "service": "cellar",
+          "data_unit": "MB",
+          "time_unit": 2592000,
           "price_plans": [
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 100
               },
@@ -83,8 +83,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 102400
               },
@@ -100,8 +98,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 10485760
               },
@@ -117,8 +113,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": null,
               "prices": [
                 {
@@ -135,10 +129,10 @@
         },
         {
           "service": "fsbucket",
+          "data_unit": "MB",
+          "time_unit": 2592000,
           "price_plans": [
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 100
               },
@@ -154,8 +148,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": null,
               "prices": [
                 {
@@ -234,10 +226,10 @@
       "byte_prices": [
         {
           "service": "cellar",
+          "data_unit": "MB",
+          "time_unit": 2592000,
           "price_plans": [
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 100
               },
@@ -253,8 +245,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 102400
               },
@@ -270,8 +260,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 10485760
               },
@@ -287,8 +275,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": null,
               "prices": [
                 {
@@ -305,10 +291,10 @@
         },
         {
           "service": "fsbucket",
+          "data_unit": "MB",
+          "time_unit": 2592000,
           "price_plans": [
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": {
                 "int": 100
               },
@@ -324,8 +310,6 @@
               ]
             },
             {
-              "data_unit": "MB",
-              "time_unit": 2592000,
               "max_quantity": null,
               "prices": [
                 {
@@ -354,32 +338,32 @@
           {
             "start_at": "2020-01-12T00:00:00.000Z",
             "end_at": "2020-01-12T23:59:59.999Z",
-            "size": 12
+            "quantity": 12
           },
           {
             "start_at": "2020-01-13T00:00:00.000Z",
             "end_at": "2020-01-13T23:59:59.999Z",
-            "size": 8
+            "quantity": 8
           },
           {
             "start_at": "2020-01-14T00:00:00.000Z",
             "end_at": "2020-01-14T23:59:59.999Z",
-            "size": 500
+            "quantity": 500
           },
           {
             "start_at": "2020-01-15T00:00:00.000Z",
             "end_at": "2020-01-15T23:59:59.999Z",
-            "size": 8388700
+            "quantity": 8388700
           },
           {
             "start_at": "2020-01-16T00:00:00.000Z",
             "end_at": "2020-01-16T23:59:59.999Z",
-            "size": 8388700
+            "quantity": 8388700
           },
           {
             "start_at": "2020-01-17T00:00:00.000Z",
             "end_at": "2020-01-17T23:59:59.999Z",
-            "size": 19922944
+            "quantity": 19922944
           }
         ]
       }

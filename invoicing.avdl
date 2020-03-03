@@ -103,6 +103,14 @@
                            "type": "string"
                         },
                         {
+                           "name": "data_unit",
+                           "type": "string"
+                        },
+                        {
+                           "name": "time_unit",
+                           "type": "int"
+                        },
+                        {
                            "name": "price_plans",
                            "type": {
                               "type": "array",
@@ -110,14 +118,6 @@
                                  "name": "price_plans_record",
                                  "type": "record",
                                  "fields": [
-                                 {
-                                    "name": "data_unit",
-                                    "type": "string"
-                                 },
-                                 {
-                                    "name": "time_unit",
-                                    "type": "int"
-                                 },
                                  {
                                     "name": "max_quantity",
                                     "type": ["int","null"]
@@ -196,7 +196,7 @@
                            "type": "string"
                         },
                         {
-                           "name": "size",
+                           "name": "quantity",
                            "type": "int"
                         }
                         ]
