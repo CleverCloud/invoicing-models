@@ -1,253 +1,481 @@
 {
-   "policies": [
-      {
-         "owner_id": "orga_foobar",
-         "zone": {"string": "gravelines"},
-         "runtime_prices": [
-            {
-               "flavor": "XS",
-               "time_unit": 1,
-               "prices": [ { "currency": "EUR", "price": 0.001 }, { "currency": "USD", "price": 0.0012 } ]
-            },
-            {
-               "flavor": "S",
-               "time_unit": 1,
-               "prices": [ { "currency": "EUR", "price": 0.002 }, { "currency": "USD", "price": 0.0024 } ]
-            },
-            {
-               "flavor": "M",
-               "time_unit": 1,
-               "prices": [ { "currency": "EUR", "price": 0.004 }, { "currency": "USD", "price": 0.0048 } ]
-            }
-         ],
-         "runtime_options": [
-            { "option_name": "extra_disk_1g", "mod_type": "ADD", "value": 0.5 },
-            { "option_name": "encrypted_disk", "mod_type": "FACTOR", "value": 1.1 }
-         ],
-         "byte_prices": [
-            {
-               "service": "cellar",
-               "price_plans": [
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int": 100},
-                     "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int": 102400},
-                     "prices": [ { "currency": "EUR", "price": 0.009 }, { "currency": "USD", "price": 0.011 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int": 10485760},
-                     "prices": [ { "currency": "EUR", "price": 0.007 }, { "currency": "USD", "price": 0.0082 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": null,
-                     "prices": [ { "currency": "EUR", "price": 0.004 }, { "currency": "USD", "price": 0.0048 } ]
-                  }
-               ]
-            },
-            {
-               "service": "fsbucket",
-               "price_plans": [
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int": 100},
-                     "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": null,
-                     "prices": [ { "currency": "EUR", "price": 0.05 }, { "currency": "USD", "price": 0.06 } ]
-                  }
-               ]
-            }
-         ]
+  "policies": [
+    {
+      "owner_id": "orga_foobar",
+      "zone": {
+        "string": "gravelines"
       },
-      {
-         "owner_id": "orga_foobar",
-         "zone": null,
-         "runtime_prices": [
+      "runtime_prices": [
+        {
+          "flavor": "XS",
+          "time_unit": 1,
+          "prices": [
             {
-               "flavor": "XS",
-               "time_unit": 1,
-               "prices": [ { "currency": "EUR", "price": 0.01 }, { "currency": "USD", "price": 0.012 } ]
+              "currency": "EUR",
+              "price": 0.001
             },
             {
-               "flavor": "S",
-               "time_unit": 1,
-               "prices": [ { "currency": "EUR", "price": 0.02 }, { "currency": "USD", "price": 0.024 } ]
-            },
-            {
-               "flavor": "M",
-               "time_unit": 1,
-               "prices": [ { "currency": "EUR", "price": 0.04 }, { "currency": "USD", "price": 0.048 } ]
+              "currency": "USD",
+              "price": 0.0012
             }
-         ],
-         "runtime_options": [
-            { "option_name": "extra_disk_1g", "mod_type": "ADD", "value": 0.5 },
-            { "option_name": "encrypted_disk", "mod_type": "FACTOR", "value": 1.1 }
-         ],
-         "byte_prices": [
+          ]
+        },
+        {
+          "flavor": "S",
+          "time_unit": 1,
+          "prices": [
             {
-               "service": "cellar",
-               "price_plans": [
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int": 100},
-                     "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int":102400},
-                     "prices": [ { "currency": "EUR", "price": 0.09 }, { "currency": "USD", "price": 0.11 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int":10485760},
-                     "prices": [ { "currency": "EUR", "price": 0.07 }, { "currency": "USD", "price": 0.082 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": null,
-                     "prices": [ { "currency": "EUR", "price": 0.04 }, { "currency": "USD", "price": 0.048 } ]
-                  }
-               ]
+              "currency": "EUR",
+              "price": 0.002
             },
             {
-               "service": "fsbucket",
-               "price_plans": [
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": {"int": 100},
-                     "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
-                  },
-                  {
-                     "data_unit": "MB",
-                     "time_unit": "month",
-                     "max_quantity": null,
-                     "prices": [ { "currency": "EUR", "price": 0.5 }, { "currency": "USD", "price": 0.6 } ]
-                  }
-               ]
+              "currency": "USD",
+              "price": 0.0024
             }
-         ]
-      }
-   ],
-   "consumptions": [
-      {
-         "com.clevercloud.invoicing.byte_consumption": {
-            "owner_id": "orga_foobar",
-            "zone": "gravelines",
-            "service_type": "cellar",
-            "service_id": "cellar_xxx",
-            "consumption_type": "byte",
-            "byte_consumptions": [
-               { "start_at": "2020-01-12T00:00:00.000Z", "end_at": "2020-01-12T23:59:59.999Z", "data_unit": "MB", "size": 12 },
-               { "start_at": "2020-01-13T00:00:00.000Z", "end_at": "2020-01-13T23:59:59.999Z", "data_unit": "MB", "size": 8 },
-               { "start_at": "2020-01-14T00:00:00.000Z", "end_at": "2020-01-14T23:59:59.999Z", "data_unit": "MB", "size": 500 },
-               { "start_at": "2020-01-15T00:00:00.000Z", "end_at": "2020-01-15T23:59:59.999Z", "data_unit": "MB", "size": 8388700 },
-               { "start_at": "2020-01-16T00:00:00.000Z", "end_at": "2020-01-16T23:59:59.999Z", "data_unit": "MB", "size": 8388700 },
-               { "start_at": "2020-01-17T00:00:00.000Z", "end_at": "2020-01-17T23:59:59.999Z", "data_unit": "MB", "size": 19922944 }
-            ]
-         }
-      },
-      {
-         "com.clevercloud.invoicing.runtime_consumption": {
-            "owner_id": "orga_foobar",
-            "zone": "gravelines",
-            "service_id": "app_xxx",
-            "consumption_type": "runtime",
-            "runtime_consumptions": [
-               {
-                  "flavor_id": "S",
-                  "instance_id": "b7c810fd-f8eb-414b-85d2-151195799341",
-                  "start_at": "2020-01-12T10:29:04.000Z",
-                  "end_at": "2020-01-20T14:03:12.000Z",
-                  "options": []
-               },
-               {
-                  "flavor_id": "XS",
-                  "instance_id": "e24230d7-a44b-4878-a21d-0e12345aabf0",
-                  "start_at": "2020-01-20T13:58:01.000Z",
-                  "end_at": "2020-01-31T23:59:59.999Z",
-                  "options": []
-               },
-               {
-                  "flavor_id": "XS",
-                  "instance_id": "3b0be24e-b222-4873-b8fc-df4df8aa3c3c",
-                  "start_at": "2020-01-20T13:58:01.000Z",
-                  "end_at": "2020-01-31T23:59:59.999Z",
-                  "options": []
-               }
-            ]
-         }
-      },
-      {
-         "com.clevercloud.invoicing.runtime_consumption": {
-            "owner_id": "orga_foobar",
-            "zone": "par",
-            "service_id": "app_yyy",
-            "consumption_type": "runtime",
-            "runtime_consumptions": [
-               {
-                  "flavor_id": "M",
-                  "instance_id": "f33ce73f-d2e3-412b-ad33-ecaac810a7c3",
-                  "start_at": "2020-01-10T10:29:04.000Z",
-                  "end_at": "2020-01-31T23:59:59.999Z",
-                  "options": [ { "option_name": "extra_disk_1g", "quantity": 50 } ]
-               },
-            ]
-         }
-      }
-   ],
-   "extra_items": [
-      { "owner_id": "orga_xxx", "description": "Manual intervention", "sub_description": "Installing a pulsar cluster", "currency": "EUR", "price": 1215.50 }
-   ],
-   "invoice": {
-      "owner_id": "orga_xxx",
-      "items": [
-         {
-            "currency": "EUR",
-            "unit_price": 60.50,
-            "quantity": 1,
-            "description": "Consumption price for app_xxx",
-            "sub_description": "Java application with a total of 3 instances running between 2020-01-12 and 2020-01-31"
-         },
-         {
-            "currency": "EUR",
-            "unit_price": 30.50,
-            "quantity": 1,
-            "description": "Consumption price for app_yyy",
-            "sub_description": "Java application with a total of 1 instances running between 2020-01-10 and 2020-01-31"
-         },
-         {
-            "currency": "EUR",
-            "unit_price": 23.01,
-            "quantity": 1,
-            "description": "Consumption price for cellar_xxx",
-            "sub_description": "Cellar add-on with an average of 5.97TB of storage and 2GB of network usage between 2020-01-12 and 2010-01-17"
-         },
-         {
-            "description": "Manual intervention",
-            "sub_description": "Installing a pulsar cluster",
-            "currency": "EUR",
-            "unit_price": 1215.50,
-            "quantity": 1
-         }
+          ]
+        },
+        {
+          "flavor": "M",
+          "time_unit": 1,
+          "prices": [
+            {
+              "currency": "EUR",
+              "price": 0.004
+            },
+            {
+              "currency": "USD",
+              "price": 0.0048
+            }
+          ]
+        }
+      ],
+      "runtime_options": [
+        {
+          "option_name": "extra_disk_1g",
+          "mod_type": "ADD",
+          "value": 0.5
+        },
+        {
+          "option_name": "encrypted_disk",
+          "mod_type": "FACTOR",
+          "value": 1.1
+        }
+      ],
+      "byte_prices": [
+        {
+          "service": "cellar",
+          "price_plans": [
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 100
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0
+                },
+                {
+                  "currency": "USD",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 102400
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.009
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.011
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 10485760
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.007
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.0082
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": null,
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.004
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.0048
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "service": "fsbucket",
+          "price_plans": [
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 100
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0
+                },
+                {
+                  "currency": "USD",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": null,
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.05
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.06
+                }
+              ]
+            }
+          ]
+        }
       ]
-   }
+    },
+    {
+      "owner_id": "orga_foobar",
+      "zone": null,
+      "runtime_prices": [
+        {
+          "flavor": "XS",
+          "time_unit": 1,
+          "prices": [
+            {
+              "currency": "EUR",
+              "price": 0.01
+            },
+            {
+              "currency": "USD",
+              "price": 0.012
+            }
+          ]
+        },
+        {
+          "flavor": "S",
+          "time_unit": 1,
+          "prices": [
+            {
+              "currency": "EUR",
+              "price": 0.02
+            },
+            {
+              "currency": "USD",
+              "price": 0.024
+            }
+          ]
+        },
+        {
+          "flavor": "M",
+          "time_unit": 1,
+          "prices": [
+            {
+              "currency": "EUR",
+              "price": 0.04
+            },
+            {
+              "currency": "USD",
+              "price": 0.048
+            }
+          ]
+        }
+      ],
+      "runtime_options": [
+        {
+          "option_name": "extra_disk_1g",
+          "mod_type": "ADD",
+          "value": 0.5
+        },
+        {
+          "option_name": "encrypted_disk",
+          "mod_type": "FACTOR",
+          "value": 1.1
+        }
+      ],
+      "byte_prices": [
+        {
+          "service": "cellar",
+          "price_plans": [
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 100
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0
+                },
+                {
+                  "currency": "USD",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 102400
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.09
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.11
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 10485760
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.07
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.082
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": null,
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.04
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.048
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "service": "fsbucket",
+          "price_plans": [
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": {
+                "int": 100
+              },
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0
+                },
+                {
+                  "currency": "USD",
+                  "price": 0
+                }
+              ]
+            },
+            {
+              "data_unit": "MB",
+              "time_unit": 2592000,
+              "max_quantity": null,
+              "prices": [
+                {
+                  "currency": "EUR",
+                  "price": 0.5
+                },
+                {
+                  "currency": "USD",
+                  "price": 0.6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "consumptions": [
+    {
+      "com.clevercloud.invoicing.byte_consumption": {
+        "owner_id": "orga_foobar",
+        "zone": "gravelines",
+        "service_type": "cellar",
+        "service_id": "cellar_xxx",
+        "byte_consumptions": [
+          {
+            "start_at": "2020-01-12T00:00:00.000Z",
+            "end_at": "2020-01-12T23:59:59.999Z",
+            "size": 12
+          },
+          {
+            "start_at": "2020-01-13T00:00:00.000Z",
+            "end_at": "2020-01-13T23:59:59.999Z",
+            "size": 8
+          },
+          {
+            "start_at": "2020-01-14T00:00:00.000Z",
+            "end_at": "2020-01-14T23:59:59.999Z",
+            "size": 500
+          },
+          {
+            "start_at": "2020-01-15T00:00:00.000Z",
+            "end_at": "2020-01-15T23:59:59.999Z",
+            "size": 8388700
+          },
+          {
+            "start_at": "2020-01-16T00:00:00.000Z",
+            "end_at": "2020-01-16T23:59:59.999Z",
+            "size": 8388700
+          },
+          {
+            "start_at": "2020-01-17T00:00:00.000Z",
+            "end_at": "2020-01-17T23:59:59.999Z",
+            "size": 19922944
+          }
+        ]
+      }
+    },
+    {
+      "com.clevercloud.invoicing.runtime_consumption": {
+        "owner_id": "orga_foobar",
+        "zone": "gravelines",
+        "service_id": "app_xxx",
+        "runtime_consumptions": [
+          {
+            "flavor_id": "S",
+            "instance_id": "b7c810fd-f8eb-414b-85d2-151195799341",
+            "start_at": "2020-01-12T10:29:04.000Z",
+            "end_at": "2020-01-20T14:03:12.000Z",
+            "options": []
+          },
+          {
+            "flavor_id": "XS",
+            "instance_id": "e24230d7-a44b-4878-a21d-0e12345aabf0",
+            "start_at": "2020-01-20T13:58:01.000Z",
+            "end_at": "2020-01-31T23:59:59.999Z",
+            "options": []
+          },
+          {
+            "flavor_id": "XS",
+            "instance_id": "3b0be24e-b222-4873-b8fc-df4df8aa3c3c",
+            "start_at": "2020-01-20T13:58:01.000Z",
+            "end_at": "2020-01-31T23:59:59.999Z",
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "com.clevercloud.invoicing.runtime_consumption": {
+        "owner_id": "orga_foobar",
+        "zone": "par",
+        "service_id": "app_yyy",
+        "runtime_consumptions": [
+          {
+            "flavor_id": "M",
+            "instance_id": "f33ce73f-d2e3-412b-ad33-ecaac810a7c3",
+            "start_at": "2020-01-10T10:29:04.000Z",
+            "end_at": "2020-01-31T23:59:59.999Z",
+            "options": [
+              {
+                "option_name": "extra_disk_1g",
+                "quantity": 50
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "extra_items": [
+    {
+      "owner_id": "orga_xxx",
+      "description": "Manual intervention",
+      "sub_description": "Installing a pulsar cluster",
+      "currency": "EUR",
+      "price": 1215.5
+    }
+  ],
+  "invoice": {
+    "owner_id": "orga_xxx",
+    "items": [
+      {
+        "currency": "EUR",
+        "unit_price": 60.5,
+        "quantity": 1,
+        "description": "Consumption price for app_xxx",
+        "sub_description": "Java application with a total of 3 instances running between 2020-01-12 and 2020-01-31"
+      },
+      {
+        "currency": "EUR",
+        "unit_price": 30.5,
+        "quantity": 1,
+        "description": "Consumption price for app_yyy",
+        "sub_description": "Java application with a total of 1 instances running between 2020-01-10 and 2020-01-31"
+      },
+      {
+        "currency": "EUR",
+        "unit_price": 23.01,
+        "quantity": 1,
+        "description": "Consumption price for cellar_xxx",
+        "sub_description": "Cellar add-on with an average of 5.97TB of storage and 2GB of network usage between 2020-01-12 and 2010-01-17"
+      },
+      {
+        "description": "Manual intervention",
+        "sub_description": "Installing a pulsar cluster",
+        "currency": "EUR",
+        "unit_price": 1215.5,
+        "quantity": 1
+      }
+    ]
+  }
 }

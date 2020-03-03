@@ -116,7 +116,7 @@
                                  },
                                  {
                                     "name": "time_unit",
-                                    "type": "string"
+                                    "type": "int"
                                  },
                                  {
                                     "name": "max_quantity",
@@ -193,10 +193,6 @@
                         },
                         {
                            "name": "end_at",
-                           "type": "string"
-                        },
-                        {
-                           "name": "data_unit",
                            "type": "string"
                         },
                         {

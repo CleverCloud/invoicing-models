@@ -68,25 +68,25 @@ console.log(
                          */
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int": 100},
                            "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int": 102400},
                            "prices": [ { "currency": "EUR", "price": 0.009 }, { "currency": "USD", "price": 0.011 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int": 10485760},
                            "prices": [ { "currency": "EUR", "price": 0.007 }, { "currency": "USD", "price": 0.0082 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": null,
                            "prices": [ { "currency": "EUR", "price": 0.004 }, { "currency": "USD", "price": 0.0048 } ]
                         }
@@ -97,13 +97,13 @@ console.log(
                      "price_plans": [
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int": 100},
                            "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": null,
                            "prices": [ { "currency": "EUR", "price": 0.05 }, { "currency": "USD", "price": 0.06 } ]
                         }
@@ -141,25 +141,25 @@ console.log(
                      "price_plans": [
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int": 100},
                            "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int":102400},
                            "prices": [ { "currency": "EUR", "price": 0.09 }, { "currency": "USD", "price": 0.11 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int":10485760},
                            "prices": [ { "currency": "EUR", "price": 0.07 }, { "currency": "USD", "price": 0.082 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": null,
                            "prices": [ { "currency": "EUR", "price": 0.04 }, { "currency": "USD", "price": 0.048 } ]
                         }
@@ -170,13 +170,13 @@ console.log(
                      "price_plans": [
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": {"int": 100},
                            "prices": [ { "currency": "EUR", "price": 0 }, { "currency": "USD", "price": 0 } ]
                         },
                         {
                            "data_unit": "MB",
-                           "time_unit": "month",
+                           "time_unit": 2592000,
                            "max_quantity": null,
                            "prices": [ { "currency": "EUR", "price": 0.5 }, { "currency": "USD", "price": 0.6 } ]
                         }
@@ -207,37 +207,31 @@ console.log(
                      {
                         "start_at": "2020-01-12T00:00:00.000Z",
                         "end_at": "2020-01-12T23:59:59.999Z",
-                        "data_unit": "MB",
                         "size": 12
                      },
                      {
                         "start_at": "2020-01-13T00:00:00.000Z",
                         "end_at": "2020-01-13T23:59:59.999Z",
-                        "data_unit": "MB",
                         "size": 8
                      },
                      {
                         "start_at": "2020-01-14T00:00:00.000Z",
                         "end_at": "2020-01-14T23:59:59.999Z",
-                        "data_unit": "MB",
                         "size": 500
                      },
                      {
                         "start_at": "2020-01-15T00:00:00.000Z",
                         "end_at": "2020-01-15T23:59:59.999Z",
-                        "data_unit": "MB",
                         "size": 8388700
                      },
                      {
                         "start_at": "2020-01-16T00:00:00.000Z",
                         "end_at": "2020-01-16T23:59:59.999Z",
-                        "data_unit": "MB",
                         "size": 8388700
                      },
                      {
                         "start_at": "2020-01-17T00:00:00.000Z",
                         "end_at": "2020-01-17T23:59:59.999Z",
-                        "data_unit": "MB",
                         "size": 19922944
                      }
                   ]
